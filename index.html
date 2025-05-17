@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixLab - Mantenimiento de PCs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #001933;
+            --cyan: #00FFF5;
+            --gray: #1a1a1a;
+            --light: #f0f0f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0f0f0f;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #000;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: var(--cyan);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.2rem;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        section {
+            padding: 4rem 1.5rem;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            background: var(--dark-blue);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        header h2 {
+            font-size: 42px;
+            color: var(--cyan);
+            font-family: 'Bebas Neue', sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 1.5rem;
+            color: var(--cyan);
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .service-list,
+        .why-us-list {
+            list-style: none;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+
+        .service-list li::before,
+        .why-us-list li::before {
+            content: "✔️ ";
+            color: var(--cyan);
+        }
+
+        .price-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .price-card {
+            background: var(--gray);
+            padding: 1.5rem;
+            border-left: 5px solid var(--cyan);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .price-card:hover {
+            transform: scale(1.02);
+        }
+
+        .price-card h3 {
+            color: var(--cyan);
+            font-size: 18px;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-card p {
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #111;
+        }
+
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            margin: 0.3rem 0;
+        }
+
+        .whatsapp-btn {
+            margin-top: 1rem;
+            background: var(--cyan);
+            color: black;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            color: #666;
+            padding: 1rem;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h1>Soporte y Mantenimiento de PCs</h1>
+        <div>
+            <a href="#servicios">Servicios</a>
+            <a href="#precios">Precios</a>
+            <a href="#porque">¿Por qué nosotros?</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h2>FixLab</h2>
+        <p>Optimiza, limpia y mejora el rendimiento de tu computadora con FixLab</p>
+    </header>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul class="service-list">
+            <li>Limpieza física (polvo, ventiladores).</li>
+            <li>Eliminación de virus y archivos basura.</li>
+            <li>Formateo e instalación de Windows o Linux.</li>
+            <li>Instalación de software educativo, técnico o de ocio.</li>
+            <li>Creación de USB booteables.</li>
+            <li>Tutorías personalizadas en Office y herramientas digitales.</li>
+        </ul>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios">
+        <h2>Precios Accesibles</h2>
+        <div class="price-table">
+            <div class="price-card">
+                <h3>Mantenimiento completo</h3>
+                <p>Físico + digital</p>
+                <p><strong>L 100</strong></p>
+            </div>
+            <div class="price-card">
+                <h3>Optimización del sistema</h3>
+                <p>Mejora rendimiento</p>
+                <p><strong>L 60</strong></p>
+            </div>
+            <div class="price-card">
+                <h3>Formateo e instalación</h3>
+                <p>Windows/Linux + drivers</p>
+                <p><strong>L 120</strong></p>
+            </div>
+            <div class="price-card">
+                <h3>Instalación de software</h3>
+                <p>Educativo o técnico</p>
+                <p><strong>L 20–40</strong></p>
+            </div>
+            <div class="price-card">
+                <h3>USB booteable</h3>
+                <p>Trae tu USB</p>
+                <p><strong>L 30</strong></p>
+            </div>
+            <div class="price-card">
+                <h3>Tutorías</h3>
+                <p>Word, Excel, PowerPoint</p>
+                <p><strong>L 50/hora</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿POR QUÉ ELEGIRNOS? -->
+    <section id="porque">
+        <h2>¿Por qué elegir FixLab?</h2>
+        <ul class="why-us-list">
+            <li>Precios pensados para estudiantes.</li>
+            <li>Atención personalizada y rápida.</li>
+            <li>Conocimiento técnico de calidad.</li>
+            <li>Sin complicaciones: nos adaptamos a ti.</li>
+            <li>Ideal para estudiantes, docentes y principiantes.</li>
+        </ul>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contact">
+        <h2>Contáctanos</h2>
+        <p><strong>Teléfono:</strong> +504 9123-4567</p>
+        <p><strong>Ubicación:</strong> En tu instituto o domicilio</p>
+        <a class="whatsapp-btn" href="https://wa.me/50491234567" target="_blank">Escríbenos por WhatsApp</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 FixLab - Todos los derechos reservados
+    </footer>
+
+</body>
+
+</html>
